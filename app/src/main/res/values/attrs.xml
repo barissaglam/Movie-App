@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BaseView">
+        <attr name="loadingView" format="reference" />
+        <attr name="emptyView" format="reference" />
+        <attr name="errorView" format="reference" />
+
+        <attr name="imageOfEmptyView" format="reference" />
+        <attr name="textOfEmptyView" format="string" />
+
+        <attr name="imageOfErrorView" format="reference" />
+        <attr name="textOfErrorView" format="string" />
+        <attr name="buttonTextOfErrorView" format="string" />
+        <attr name="buttonVisibilityOfErrorView" format="boolean" />
+    </declare-styleable>
+</resources>

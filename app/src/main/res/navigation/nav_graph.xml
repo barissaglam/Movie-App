@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="barissaglam.client.movieapp.presentation.movies.MoviesFragment"
+        android:label="MoviesFragment">
+        <action
+            android:id="@+id/action_moviesFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_moviesFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_moviesFragment_to_movieListFragment"
+            app:destination="@id/movieListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="barissaglam.client.movieapp.presentation.search.SearchFragment"
+        android:label="SearchFragment">
+        <action
+            android:id="@+id/action_searchFragment_to_movieListFragment"
+            app:destination="@id/movieListFragment"
+            app:popUpTo="@id/moviesFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/movieDetailFragment"
+        android:name="barissaglam.client.movieapp.presentation.detail.MovieDetailFragment"
+        android:label="MovieDetailFragment">
+        <argument
+            android:name="movie_id"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:name="barissaglam.client.movieapp.presentation.list.MovieListFragment"
+        android:label="MovieListFragment">
+        <argument
+            android:name="page_type"
+            app:argType="barissaglam.client.movieapp.data.enum.MovieListPageType" />
+        <action
+            android:id="@+id/action_movieListFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <argument
+            android:name="search_query"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cast"
+            type="barissaglam.client.movieapp.data.model.uimodel.CastViewItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_4dp"
+        android:paddingEnd="@dimen/padding_4dp">
+
+        <ImageView
+            android:id="@+id/imageViewActor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/temp_actor"
+            app:circleImageUrl="@{cast.profilePath}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewActorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="10"
+            android:text="@{cast.name}"
+            android:textColor="@color/gray9ba0a6"
+            android:textSize="@dimen/textSizeSmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewActor"
+            tools:text="Here is name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

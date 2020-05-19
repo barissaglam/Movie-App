@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="visibility"
+            type="Integer" />
+
+        <variable
+            name="hideArrow"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="@{visibility}">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:text="@{title}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeViewPagerTitle"
+            app:fontFamily="@font/ubuntu_m"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Popüler Filmler" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_8dp"
+            android:src="@drawable/ic_arrow_forward_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewTitle"
+            app:visibility="@{!hideArrow}" />
+
+        <barissaglam.client.movieapp.view.WrapContentViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/padding_14dp"
+            android:paddingEnd="@dimen/padding_14dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

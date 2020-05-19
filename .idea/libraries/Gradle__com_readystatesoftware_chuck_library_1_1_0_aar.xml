@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.readystatesoftware.chuck:library:1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ccd732784479f5a7e3cc95b87c0b700e/jetified-library-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ccd732784479f5a7e3cc95b87c0b700e/jetified-library-1.1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.readystatesoftware.chuck/library/1.1.0/97523a88e5c088269cc0cd02b18731c2b5cad3d8/library-1.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.readystatesoftware.chuck/library/1.1.0/46170871b9a11b6bca575c8057a9dea21b6196ec/library-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
