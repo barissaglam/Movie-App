@@ -13,7 +13,7 @@ It is a simple android application that consists of 4 pages, including Homepage,
 - Pagination
 - RxJava
 - Retrofit
-- OKHttp 3
+- OKHttp
 - Dagger 2
 - Stetho
 - Chuck
