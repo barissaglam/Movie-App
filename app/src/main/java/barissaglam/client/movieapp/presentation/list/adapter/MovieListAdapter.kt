@@ -65,7 +65,7 @@ class MovieListAdapter : PagedListAdapter<MovieViewItem, BaseViewHolder<*>>(Movi
 
 
     override fun getItemCount(): Int {
-        return super.getItemCount() + 1
+        return if (super.getItemCount() != 0) super.getItemCount() + 1 else 0
     }
 
     override fun onBindViewHolder(holder: BaseViewHolder<*>, position: Int) {
